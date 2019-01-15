@@ -1,1 +1,3 @@
 *.ckpt.*
+.idea/
+courses/Practical_RL-coursera/week1_intro/videos/

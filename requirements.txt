@@ -1,0 +1,10 @@
+gym
+gym[atari]
+tensorflow-gpu
+matplotlib
+jupyter
+scikit-learn
+keras
+joblib
+pandas
+Pillow
