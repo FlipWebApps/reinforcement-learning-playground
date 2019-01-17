@@ -9,7 +9,6 @@ class BasicTranslationModel:
         self.name = name
         self.inp_voc = inp_voc
         self.out_voc = out_voc
-
         with tf.variable_scope(name):
             self.emb_inp = L.Embedding(len(inp_voc), emb_size)
             self.emb_out = L.Embedding(len(out_voc), emb_size)
@@ -17,7 +16,6 @@ class BasicTranslationModel:
             self.dec_start = L.Dense(hid_size)
             self.dec0 = tf.nn.rnn_cell.GRUCell(hid_size)
             self.logits = L.Dense(len(out_voc))
-
 
             # run on dummy output to .build all layers (and therefore create weights)
             inp = tf.placeholder('int32', [None, None])
@@ -27,6 +25,7 @@ class BasicTranslationModel:
             # h2 = self.decode(h1,out[:,1]) etc.
 
         self.weights = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope=name)
+
 
 
     def encode(self, inp, **flags):

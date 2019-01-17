@@ -1,3 +1,5 @@
 *.ckpt.*
 .idea/
 courses/Practical_RL-coursera/week1_intro/videos/
+courses/Practical_RL-coursera/week4_approx/videos/
+courses/Practical_RL-coursera/week5_policy_based/kungfu_videos/
